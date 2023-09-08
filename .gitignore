@@ -9,3 +9,4 @@ __*
 utils/render/kernels/*
 !utils/render/kernels/rasterize_triangles_kernel_1.so
 # restore_from_crop.py
+input/
