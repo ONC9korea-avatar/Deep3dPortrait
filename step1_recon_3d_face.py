@@ -2,13 +2,15 @@ import tensorflow as tf
 import numpy as np
 import cv2
 from PIL import Image
-import os
+import os, sys
 from scipy.io import loadmat,savemat
 from utils.preprocess import POS, headrecon_preprocess_withmask, facerecon_preprocess_yu_5p, facerecon_preprocess
 from utils.loader import load_data, load_lm3d, load_center3d, read_facemodel
 from utils.recon_face import  compute_center2d, compute_faceshape
 from utils.create_renderer import create_renderer_graph
 from PIL import Image
+
+import warnings; warnings.filterwarnings('ignore')
 
 
 def load_facerecon_graph(graph_filename):
@@ -114,7 +116,7 @@ def face_recon(input_path, output_path, vis_path=None, s_factor=1.5, focal=1015,
 
 
 if __name__ == '__main__':
-    input_path = 'examples'
+    input_path = sys.argv[1]
     save_path = 'output/step1'
     vis_path = 'output/step1/vis'
     if not os.path.isdir(save_path):

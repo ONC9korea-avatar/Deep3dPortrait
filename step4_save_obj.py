@@ -3,6 +3,8 @@ from scipy.io import loadmat
 from utils.construct_triangles import remove_small_area, filter_tri, find_boundary_ind, construct_triangle
 from utils.loader import load_boundary_ind
 
+import warnings; warnings.filterwarnings('ignore')
+
 
 def save_obj(data_path, save_path, stitch=True):
     names = [i for i in os.listdir(data_path) if i.endswith('.mat')]

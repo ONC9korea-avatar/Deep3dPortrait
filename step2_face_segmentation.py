@@ -7,6 +7,7 @@ from utils.loader import load_mask
 from utils.face_parsing import split_segmask
 from utils.construct_triangles import remove_small_area, filter_tri, padding_tri
 
+import warnings; warnings.filterwarnings('ignore')
 
 def prepare_mask(input_path, save_path, mask_path, vis_path=None, filter_flag=True, padding_flag=True):
     names = [i for i in os.listdir(input_path) if i.endswith('mat')]

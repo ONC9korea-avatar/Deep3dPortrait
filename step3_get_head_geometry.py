@@ -6,6 +6,8 @@ from utils.recon_depth import split_data, get_pixel_value, get_face_texture, uvd
 from utils.create_renderer import create_renderer_graph
 from scipy.io import savemat, loadmat
 
+import warnings; warnings.filterwarnings('ignore')
+
 _FACE_V_NUM = 35709
 _FACE_T_NUM = 70789
 _HAIREAR_V_NUM = 28000
